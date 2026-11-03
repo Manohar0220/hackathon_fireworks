@@ -1,0 +1,21 @@
+Use case: productivity-visual.
+Create a clean, polished, high-resolution landscape results TABLE IMAGE for a hackathon presentation. White background, medium-light gray column heading cells, WHITE remaining data rows, charcoal text, thin gray grid lines. Large highly legible monospaced text. Generous cell padding, no cropped text, no illustrations or logos. Match a professional gray-and-white data table.
+
+Title above table: "Baseline Model Evaluation"
+Subtitle directly below title and ABOVE the table: "Input: OCR • Same 200 held-out documents per model"
+There are EXACTLY 6 columns and 3 data rows. The first column should be wide enough for wrapping model names. Wrap headings to preserve readability.
+
+Column headings, verbatim:
+"Model (baseline)" | "Field F1, fuzzy" | "Field F1, exact" | "Precision / recall (exact)" | "Doc success (all fields exact)" | "Latency p50 / p95"
+
+Data, EXACTLY:
+"GLM 5.3 Flash" | "48.67%" | "43.09%" | "49.51% / 38.15%" | "0.0%" | "1.257 s / 4.381 s"
+"Qwen3.8 27B" | "35.15%" | "31.74%" | "32.13% / 31.35%" | "0.0%" | "2.243 s / 3.464 s"
+"Nemotron Lightning 3.5" | "17.98%" | "16.01%" | "14.09% / 18.53%" | "0.0%" | "0.845 s / 3.094 s"
+
+Below table in readable smaller text:
+"Fuzzy: one-to-one matching within each field at ≥90% normalized string similarity."
+"Saved baseline results • 200/200 responses each • Same scoring rules as DeepSeek."
+"Latency routes differ: Qwen uses SDK sampling; GLM and Nemotron use chat inference. GLM reasoning: low; others: none."
+
+Constraints: these are BASELINE results, never label them fine-tuned. Do not add other models or invented scores. Preserve every digit, decimal, percentage and model name. White data cells and gray heading cells required.

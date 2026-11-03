@@ -1,0 +1,10 @@
+# Source documents and downloaded datasets stay local.
+data/
+tmp/
+.env
+.env.*
+!.env.example
+__pycache__/
+.venv/
+# Reduced training and evaluation datasets are local artifacts.
+/*.jsonl

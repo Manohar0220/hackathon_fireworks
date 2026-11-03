@@ -1,0 +1,3 @@
+model,responses,field_f1_fuzzy_percent,field_f1_exact_percent,precision_exact_percent,recall_exact_percent,doc_success_percent,latency_p50_seconds,latency_p95_seconds
+DeepSeek V4.1 Flash (baseline),200/200,47.53,42.22,40.15,44.51,0.0,1.356,2.092
+DeepSeek V4.1 Flash (finetuned),200/200,78.33,70.17,71.81,68.6,4.5,1.135,3.005

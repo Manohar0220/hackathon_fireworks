@@ -1,0 +1,24 @@
+Use case: productivity-visual.
+Create one polished, presentation-ready TABLE IMAGE for an invoice-extraction hackathon. Landscape layout, approximately 16:9, very sharp readable typography. Dark navy background, white text, restrained orange accent, subtle row dividers. No decorative illustrations or logos. All text must be spelled exactly as specified. Large uncluttered table, generous spacing.
+
+Title: "InvoiceRoute — Dataset Split"
+Subtitle: "Prepared split for the four-model fine-tuning comparison"
+
+Table columns, exactly in this order:
+"Model" | "Train" | "Validation" | "Test" | "Total"
+
+Exactly four data rows:
+"GLM 5.3 Flash" | "1,500" | "150" | "200" | "1,850"
+"Qwen3.8 27B" | "1,500" | "150" | "200" | "1,850"
+"Nemotron Lightning 3.5" | "1,500" | "150" | "200" | "1,850"
+"DeepSeek V4.1 Flash" | "1,500" | "150" | "200" | "1,850"
+
+Below the table, a single clear line:
+"Train 81.1%  •  Validation 8.1%  •  Test 10.8%"
+
+Bottom notes in smaller but legible text:
+"Same 1,850 documents shared across all four models."
+"Files: train.jsonl • val.jsonl • val_eval.jsonl"
+"Counts reflect prepared files; teammates’ training-run usage has not been verified."
+
+Constraints: Exactly these four models and these numbers. Do not multiply the dataset size by four. Do not add accuracy, F1, benchmark scores, or claims that training has completed. No clipped text, no invented labels, no extra columns.

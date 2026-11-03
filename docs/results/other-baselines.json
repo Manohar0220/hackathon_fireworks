@@ -1,0 +1,105 @@
+{
+  "fuzzy_rule": "Maximum one-to-one matches within the same field; difflib.SequenceMatcher(autojunk=False) ratio >=0.90 after NFKC, casefolding, and whitespace collapse. Digits/punctuation retained.",
+  "exact_rule": "Exact field-name/string multiset matching; list order ignored. Empty arrays contribute no values. Unknown fields/malformed value types are false positives; invalid JSON/non-object output is an empty prediction.",
+  "document_success_rule": "Valid schema and all field/value instances exactly match the reference, with no extra or missing values.",
+  "evaluation_examples": 200,
+  "evaluation_sha256": "82b83b10306759384c737918462b2fcd3616195c54de4f420df45d7fb3a440bc",
+  "training_performed": false,
+  "source": "Previously saved baseline outputs; no new inference calls.",
+  "latency_rule": "Successful final attempt wall time; p50/p95 linear interpolation. Qwen uses Training SDK sampling, GLM and Nemotron use chat inference. Retries excluded; routes and reasoning settings differ.",
+  "models": {
+    "glm": {
+      "resource": "accounts/fireworks/models/glm-5p3-flash",
+      "route": "chat",
+      "examples": 200,
+      "successful_responses": 200,
+      "request_errors": 0,
+      "exact": {
+        "tp": 803,
+        "fp": 819,
+        "fn": 1302,
+        "precision": 0.49506781750924783,
+        "recall": 0.3814726840855107,
+        "f1": 0.4309095787496646
+      },
+      "fuzzy": {
+        "tp": 907,
+        "fp": 715,
+        "fn": 1198,
+        "precision": 0.5591861898890259,
+        "recall": 0.4308788598574822,
+        "f1": 0.4867185403810035
+      },
+      "document_success_count": 0,
+      "document_success_rate": 0.0,
+      "valid_json_rate": 1.0,
+      "valid_schema_rate": 0.995,
+      "latency_p50_seconds": 1.25725,
+      "latency_p95_seconds": 4.380629999999977,
+      "reasoning_effort": "low",
+      "recorded_api_attempts": 200
+    },
+    "qwen": {
+      "resource": "accounts/fireworks/models/qwen3p8-27b",
+      "route": "sampler",
+      "examples": 200,
+      "successful_responses": 200,
+      "request_errors": 0,
+      "exact": {
+        "tp": 660,
+        "fp": 1394,
+        "fn": 1445,
+        "precision": 0.3213242453748783,
+        "recall": 0.31353919239904987,
+        "f1": 0.3173839865352248
+      },
+      "fuzzy": {
+        "tp": 731,
+        "fp": 1323,
+        "fn": 1374,
+        "precision": 0.3558909444985394,
+        "recall": 0.3472684085510689,
+        "f1": 0.3515268093291657
+      },
+      "document_success_count": 0,
+      "document_success_rate": 0.0,
+      "valid_json_rate": 1.0,
+      "valid_schema_rate": 0.685,
+      "latency_p50_seconds": 2.2426,
+      "latency_p95_seconds": 3.46399,
+      "reasoning_effort": "none",
+      "recorded_api_attempts": 201
+    },
+    "nemotron": {
+      "resource": "accounts/fireworks/models/nemotron-lightning-3p5-30b-a3b",
+      "route": "chat",
+      "examples": 200,
+      "successful_responses": 200,
+      "request_errors": 0,
+      "exact": {
+        "tp": 390,
+        "fp": 2378,
+        "fn": 1715,
+        "precision": 0.14089595375722544,
+        "recall": 0.18527315914489312,
+        "f1": 0.16006566796634517
+      },
+      "fuzzy": {
+        "tp": 438,
+        "fp": 2330,
+        "fn": 1667,
+        "precision": 0.15823699421965318,
+        "recall": 0.20807600950118765,
+        "f1": 0.17976605786989533
+      },
+      "document_success_count": 0,
+      "document_success_rate": 0.0,
+      "valid_json_rate": 0.99,
+      "valid_schema_rate": 0.225,
+      "latency_p50_seconds": 0.84475,
+      "latency_p95_seconds": 3.0936099999999933,
+      "reasoning_effort": "none",
+      "recorded_api_attempts": 297
+    }
+  }
+}

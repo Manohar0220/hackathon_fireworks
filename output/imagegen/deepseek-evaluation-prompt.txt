@@ -1,0 +1,15 @@
+Create a polished, presentation-ready landscape TABLE IMAGE on a white background. Gray column-header row, WHITE data rows, dark charcoal text, thin gray grid lines, large legible typography. No orange, no dark background, no decorative illustrations. Title: "DeepSeek V4.1 Flash — Evaluation". Subtitle: "Input: OCR • Same 200 held-out documents • Baseline vs fine-tuned".
+
+Six columns, in this order, with line breaks in headers as needed:
+"Model" | "Field F1, fuzzy" | "Field F1, exact" | "Precision / recall (exact)" | "Doc success (all fields exact)" | "Latency p50 / p95"
+
+Exactly two rows with these exact values:
+"Baseline" | "47.53%" | "42.22%" | "40.15% / 44.51%" | "0.0%" | "1.356 s / 2.092 s"
+"Fine-tuned" | "78.33%" | "70.17%" | "71.81% / 68.60%" | "4.5%" | "1.135 s / 3.005 s"
+
+Below the table, a prominent line: "Exact field F1: +27.95 percentage points"
+Then two readable smaller notes:
+"Fuzzy: one-to-one matching within each field at ≥90% normalized string similarity."
+"Latency routes differ: baseline serverless; fine-tuned dedicated."
+
+All values are measured results. Preserve the exact numbers and model labels, with no extra models or claims. The fine-tuned row may be bolded for emphasis. Do not add training counts or claim statistical significance.

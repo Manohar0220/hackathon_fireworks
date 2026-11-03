@@ -1,0 +1,76 @@
+{
+  "evaluation_examples": 200,
+  "evaluation_sha256": "82b83b10306759384c737918462b2fcd3616195c54de4f420df45d7fb3a440bc",
+  "input": "OCR text with source positions",
+  "temperature": 0,
+  "max_tokens": 4096,
+  "reasoning_effort": "none",
+  "fuzzy_rule": "Maximum one-to-one matches within the same field; difflib.SequenceMatcher(autojunk=False) ratio >=0.90 after NFKC, casefolding, and whitespace collapse. Digits/punctuation retained.",
+  "exact_rule": "Exact field-name/string multiset matching; list order ignored. Empty arrays contribute no values. Unknown fields/malformed value types are false positives; invalid JSON/non-object output is an empty prediction.",
+  "document_success_rule": "Valid schema and all field/value instances exactly match the reference, with no extra or missing values.",
+  "latency_rule": "Successful request wall-clock latency, p50/p95 by linear interpolation. Baseline uses serverless inference; tuned uses a dedicated four-B300 FP4 deployment. Hardware/routes differ; this is not a controlled hardware comparison.",
+  "training_performed": false,
+  "models": {
+    "baseline": {
+      "resource": "accounts/fireworks/models/deepseek-v4p1-flash",
+      "examples": 200,
+      "successful_responses": 200,
+      "request_errors": 0,
+      "complete": true,
+      "exact": {
+        "tp": 937,
+        "fp": 1397,
+        "fn": 1168,
+        "precision": 0.4014567266495287,
+        "recall": 0.4451306413301663,
+        "f1": 0.4221671547645866
+      },
+      "fuzzy": {
+        "tp": 1055,
+        "fp": 1279,
+        "fn": 1050,
+        "precision": 0.45201371036846616,
+        "recall": 0.501187648456057,
+        "f1": 0.47533228204550576
+      },
+      "document_success_count": 0,
+      "document_success_rate": 0.0,
+      "valid_json_rate": 1.0,
+      "valid_schema_rate": 0.94,
+      "latency_p50_seconds": 1.3563,
+      "latency_p95_seconds": 2.0919599999999985,
+      "recorded_api_attempts": 200
+    },
+    "finetuned": {
+      "resource": "accounts/korikanamanohar2-me6/deployments/inv-deepseek-demo",
+      "examples": 200,
+      "successful_responses": 200,
+      "request_errors": 0,
+      "complete": true,
+      "exact": {
+        "tp": 1444,
+        "fp": 567,
+        "fn": 661,
+        "precision": 0.7180507210343113,
+        "recall": 0.6859857482185273,
+        "f1": 0.7016520894071915
+      },
+      "fuzzy": {
+        "tp": 1612,
+        "fp": 399,
+        "fn": 493,
+        "precision": 0.8015912481352561,
+        "recall": 0.7657957244655582,
+        "f1": 0.783284742468416
+      },
+      "document_success_count": 9,
+      "document_success_rate": 0.045,
+      "valid_json_rate": 1.0,
+      "valid_schema_rate": 1.0,
+      "latency_p50_seconds": 1.1355,
+      "latency_p95_seconds": 3.005324999999999,
+      "recorded_api_attempts": 200
+    }
+  },
+  "exact_f1_change_percentage_points": 27.948493464260487
+}

@@ -1,0 +1,25 @@
+Create a clean, shareable landscape infographic, approximately 16:9, with a white background, light gray panel headings, charcoal text, and clear gray arrows. Use large readable monospace text inside two side-by-side cards. The LEFT card must show actual OCR text. The RIGHT card must show the actual extracted JSON excerpt. Put a large right-pointing arrow between the cards, labeled "Fine-tuned DeepSeek". Title: "InvoiceRoute — OCR to JSON". Do not show PDFs or document photos. No logos. Keep it uncluttered.
+
+LEFT card heading: "Input: OCR text (excerpt)"
+Render this text exactly, with natural line breaks:
+WHTH WNKO Proposal
+1000 N. 40th Street
+P.O. Box 1057
+Newark, Oh 43058-1057
+
+Date : 3/4/2020
+
+Quan : 47
+Total Investment : $503.70
+
+RIGHT card heading: "Output: structured JSON (excerpt)"
+Render this exact valid JSON with quoted keys and arrays:
+{
+  "date_issue": ["3/4/2020"],
+  "vendor_name": ["WHTH WNKO"],
+  "amount_total_gross": ["$503.70"],
+  "amount_due": ["$503.70"],
+  "currency_code_amount_due": ["$"]
+}
+
+Use subtle gray highlights behind the date and total in the OCR card and the matching JSON values. Make the connecting arrow marks unmistakable and point left-to-right. Bottom caption: "Actual OCR and fine-tuned DeepSeek response • Excerpts shown; OCR coordinates omitted". Keep all strings and numbers exact. No invented predictions, extra fields, or metrics.

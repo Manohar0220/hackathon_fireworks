@@ -1,0 +1,77 @@
+Create a polished, highly legible landscape comparison TABLE IMAGE on a white background. Gray heading cells, white data cells, charcoal text, thin gray grid lines, generous padding. This is a presentation asset, typography must be crisp and readable.
+
+Title: "Baseline vs Fine-tuned — Model Evaluation"
+Subtitle: "Input: OCR"
+
+Table structure: EXACTLY THREE columns: "Model", "Baseline", "Fine-tuned". The Model column is narrow (about 20%), and the two result columns equally wide (40% each). Four model rows. In each result cell, print SIX stacked, aligned labeled lines. Keep identical metric ordering in both result columns. The fine-tuned scores may be bold for readability. No extra columns.
+
+Row 1 Model: "DeepSeek V4.1 Flash"
+Baseline cell:
+Fuzzy F1: 47.53%
+Exact F1: 42.22%
+Precision / Recall: 40.15% / 44.51%
+Doc success: 0.0%
+Latency p50: 1.356 s
+Latency p95: 2.092 s
+Fine-tuned cell:
+Fuzzy F1: 78.33%
+Exact F1: 70.17%
+Precision / Recall: 71.81% / 68.60%
+Doc success: 4.5%
+Latency p50: 1.135 s
+Latency p95: 3.005 s
+
+Row 2 Model: "GLM 5.3 Flash"
+Baseline cell:
+Fuzzy F1: 48.67%
+Exact F1: 43.09%
+Precision / Recall: 49.51% / 38.15%
+Doc success: 0.0%
+Latency p50: 1.257 s
+Latency p95: 4.381 s
+Fine-tuned cell:
+Fuzzy F1: 78.7%
+Exact F1: 71.2%
+Precision / Recall: 72.5% / 70.0%
+Doc success: 4.5%
+Latency p50: 2.08 s
+Latency p95: 3.03 s
+
+Row 3 Model: "Qwen3.8 27B"
+Baseline cell:
+Fuzzy F1: 35.15%
+Exact F1: 31.74%
+Precision / Recall: 32.13% / 31.35%
+Doc success: 0.0%
+Latency p50: 2.243 s
+Latency p95: 3.464 s
+Fine-tuned cell:
+Fuzzy F1: 78.0%
+Exact F1: 69.6%
+Precision / Recall: 71.0% / 68.3%
+Doc success: 3.5%
+Latency p50: 2.42 s
+Latency p95: 3.55 s
+
+Row 4 Model: "Nemotron Lightning 3.5"
+Baseline cell:
+Fuzzy F1: 17.98%
+Exact F1: 16.01%
+Precision / Recall: 14.09% / 18.53%
+Doc success: 0.0%
+Latency p50: 0.845 s
+Latency p95: 3.094 s
+Fine-tuned cell:
+Fuzzy F1: 54.9%
+Exact F1: 50.1%
+Precision / Recall: 50.0% / 50.1%
+Doc success: 0%
+Latency p50: 1.45 s
+Latency p95: 2.79 s
+
+Footer, small but clearly readable, wrap into three lines:
+"Baseline and DeepSeek fine-tuned: measured on 200 held-out documents."
+"Other fine-tuned results: team-reported; scoring equivalence unverified."
+"Precision/recall and document success use exact matching. Latency routes differ."
+
+Constraints: Preserve every supplied value exactly, including decimal precision. Do not invent metrics or compute gains. Only these four models. No colorful fills, no dark background. The table must be a SINGLE table with Baseline and Fine-tuned as the two main comparison columns, not separate tables. Ensure every line fits without clipping.

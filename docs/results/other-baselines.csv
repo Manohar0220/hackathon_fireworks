@@ -1,0 +1,4 @@
+model,responses,field_f1_fuzzy_percent,field_f1_exact_percent,precision_exact_percent,recall_exact_percent,doc_success_percent,latency_p50_seconds,latency_p95_seconds
+GLM 5.3 Flash,200/200,48.67,43.09,49.51,38.15,0.0,1.257,4.381
+Qwen3.8 27B,200/200,35.15,31.74,32.13,31.35,0.0,2.243,3.464
+Nemotron Lightning 3.5,200/200,17.98,16.01,14.09,18.53,0.0,0.845,3.094
