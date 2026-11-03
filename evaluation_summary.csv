@@ -1,0 +1,4 @@
+model_name,model_id,run_time_pst,n_docs,api_errors,json_valid_pct,fuzzy_f1,exact_f1,exact_precision,exact_recall,fuzzy_precision,fuzzy_recall,doc_success_pct,latency_p50_s,latency_p95_s,avg_output_tokens,gpus
+glm53flash-tuned,accounts/siakatakhan-pgaz2u78/models/inv-glm53flash#accounts/siakatakhan-pgaz2u78/deployments/inv-glm53flash-dep,16:20,200,0,100.0,79.0,71.6,73.1,70.2,80.6,77.5,5.0,2.02,3.39,161,4x B300
+qwen27b-tuned,accounts/siakatakhan-pgaz2u78/models/inv-qwen27b#accounts/siakatakhan-pgaz2u78/deployments/inv-qwen27b-dep,16:20,200,0,100.0,77.8,69.3,70.6,68.1,79.2,76.4,3.5,1.08,1.48,181,1x B200
+nemotron-tuned,accounts/siakatakhan-pgaz2u78/models/inv-nemotron#accounts/siakatakhan-pgaz2u78/deployments/inv-nemotron-dep,16:20,200,0,100.0,56.4,51.0,51.0,50.9,56.5,56.3,0.0,0.59,0.94,188,1x B200
