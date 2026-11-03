@@ -159,7 +159,7 @@ All baseline rows and the DeepSeek fine-tuned row below were scored locally on t
 
 [Combined presentation table](output/imagegen/combined-evaluation-v1.png) · [OCR-to-JSON example](output/imagegen/ocr-to-json-v1.png)
 
-Portable result exports: [DeepSeek CSV](docs/results/deepseek-comparison.csv), [DeepSeek detailed JSON](docs/results/deepseek-comparison.json), [other baselines CSV](docs/results/other-baselines.csv), [other baselines detailed JSON](docs/results/other-baselines.json). These summaries are copied outside the ignored `data/` folder so they can travel with the README.
+Portable result exports: [DeepSeek CSV](docs/results/deepseek-comparison.csv), [DeepSeek detailed JSON](docs/results/deepseek-comparison.json), [other baselines CSV](docs/results/other-baselines.csv), [other baselines detailed JSON](docs/results/other-baselines.json). Team-supplied fine-tuned GLM, Qwen and Nemotron runs: [summary CSV](docs/results/evaluation_summary.csv), [per-field F1 CSV](docs/results/evaluation_per_field_f1.csv), [predictions CSV](docs/results/evaluation_predictions.csv), and per-model raw outputs (`docs/results/<model>-tuned.jsonl`) with summaries (`docs/results/<model>-tuned.summary.json`). These summaries are copied outside the ignored `data/` folder so they can travel with the README.
 
 ### How OCR scores are calculated
 
