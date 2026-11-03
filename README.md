@@ -8,9 +8,13 @@ On the same **200 held-out documents**, fine-tuned DeepSeek V4.1 Flash improved 
 
 For the **GLM PDF/vision route**, the team reports field accuracy improving from **78.5% to 88.4%**, and fully correct documents from **12.8% to 38.8%**, on **500 held-out documents**. This uses a different metric and test set from the OCR comparison.
 
-## Demo video
+## Presentation
 
-**[Download the final presentation slides](docile-forge-5-slides.pptx)** - 6 slides covering GLM PDF/vision and OCR-to-JSON results.
+[![Open the InvoiceRoute presentation](docs/media/presentation-preview.png)](docile-forge-5-slides.pptx)
+
+**[View or download the presentation](docile-forge-5-slides.pptx)** - 6 slides covering the problem, data, GLM PDF/vision results, and OCR-to-JSON evaluation.
+
+## Demo video
 
 [![Watch the InvoiceRoute demo](docs/media/demo-preview.png)](docs/media/demo_video.mp4)
 
