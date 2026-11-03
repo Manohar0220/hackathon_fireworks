@@ -1,0 +1,59 @@
+{
+  "model": "GLM 5.3 Flash",
+  "input": "PDF document pages rendered as images",
+  "provenance": "Team-reported; transcribed from docile-forge-5-slides.pptx slides 2-4 and 6 and speaker notes; not independently recomputed",
+  "train_documents": 1400,
+  "evaluation_documents": 500,
+  "evaluation_field_cases": 5000,
+  "layout_clusters": 204,
+  "unseen_layout_documents": 124,
+  "separate_tuning_validation_documents": null,
+  "metric": "Field accuracy: exact match after normalization; absent fields must be null",
+  "baseline": {
+    "field_accuracy_percent": 78.5,
+    "all_ten_fields_correct_percent": 12.8,
+    "both_money_fields_correct_percent": 74,
+    "absent_fields_correct_percent": 65,
+    "order_number_accuracy_percent": 58,
+    "currency_accuracy_percent": 66,
+    "vendor_accuracy_percent": 73
+  },
+  "finetuned": {
+    "field_accuracy_percent": 88.4,
+    "all_ten_fields_correct_percent": 38.8,
+    "both_money_fields_correct_percent": 84,
+    "absent_fields_correct_percent": 87,
+    "order_number_accuracy_percent": 79,
+    "currency_accuracy_percent": 90,
+    "vendor_accuracy_percent": 85
+  },
+  "training": {
+    "method": "Vision LoRA SFT",
+    "rank": 16,
+    "learning_rate": 0.0001,
+    "epochs": 1,
+    "steps": 88,
+    "training_image_size_px": 1600,
+    "evaluation_image_size_px": 1344
+  },
+  "reported_statistics": {
+    "mcnemar_wins": 625,
+    "mcnemar_losses": 134,
+    "mcnemar_p_approx": 1e-76,
+    "layout_bootstrap_resamples": 5000,
+    "gain_95_percent_interval_pp": [
+      7.7,
+      12.2
+    ],
+    "unseen_layout_gain_pp": 4.7
+  },
+  "reported_cost_usd": {
+    "training_approx": 36,
+    "experiment_total_approx": 40,
+    "baseline_500_documents": 0.24
+  },
+  "latency_p50_seconds": null,
+  "latency_p95_seconds": null,
+  "fuzzy_f1": null,
+  "exact_field_f1": null
+}
